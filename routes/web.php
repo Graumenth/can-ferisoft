@@ -7,5 +7,5 @@ use App\Http\Controllers\AdminController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/', [PostController::class, 'index'])->name('contact');
-Route::get('/', [AdminController::class, 'index'])->name('admin');
+Route::get('/contact', [PostController::class, 'index'])->name('contact');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
