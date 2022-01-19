@@ -12,17 +12,17 @@ class PostController extends Controller
         return view('contact.index');
     }
 
-    public function save(Request $request){
-        $inputs = $this->validate($request, [
+    public function save(){
+        $inputs = \request()->validate([
             'name' => 'required|min:4|max:255',
             'message' => 'required'
         ]);
 
-        if(Post::create($request->all())){
-            session()->flash('message-post-created', 'Post named '.$inputs['title'].' was successfully created');
+        if(Post::create($inputs)){
+            session()->flash('message-post-created', 'Your message was successfully delivered');
         }else{
-            session()->flash('message-post-failed', 'There was a problem with adding the post');
+            session()->flash('message-post-failed', 'There was a problem with sending the message');
         }
-        return redirect()->route('contact.index');
+        return redirect()->route('contact');
     }
 }
