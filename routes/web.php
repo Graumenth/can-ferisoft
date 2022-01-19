@@ -10,3 +10,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [PostController::class, 'index'])->name('contact');
 Route::post('/contact/save', [PostController::class, 'save'])->name('contact.save');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::delete('/admin/{post}/destroy', [AdminController::class, 'destroy'])->name('admin.posts.destroy');
