@@ -1,9 +1,5 @@
-<footer class="text-muted py-5">
+<footer class="footer mt-auto py-3 bg-light">
     <div class="container">
-        <p class="float-end mb-1">
-            <a href="#">Back to top</a>
-        </p>
-        <p class="mb-1">Example footer</p>
-        <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+        <span class="text-muted">Place sticky footer content here.</span>
     </div>
 </footer>
